@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# folders
+src/app/dashboard/brands/*
+!src/app/dashboard/brands/_components
+!src/app/dashboard/brands/page.tsx
+!/logs/important.log
