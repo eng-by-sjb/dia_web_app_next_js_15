@@ -3,7 +3,7 @@ import { GoImage, GoPlus } from "react-icons/go";
 import { useFormContext } from "./form_context";
 
 export default function Col1() {
-  const { formState, validateForm, errors } = useFormContext();
+  const { formState, updateFormState, validateForm, errors } = useFormContext();
 
   return (
     <div>
@@ -19,6 +19,8 @@ export default function Col1() {
                 src={URL.createObjectURL(formState.coverPhoto)}
                 alt="Uploaded"
                 className="object-cover w-full h-full rounded-lg"
+                width={100}
+                height={100}
               />
             ) : (
               <span className="text-gray-400/30">
@@ -32,6 +34,10 @@ export default function Col1() {
             accept="image/*"
             name="coverPhoto"
             id="coverPhoto"
+            onChange={(e) => {
+              e.target.files !== null ? updateFormState("coverPhoto", e.target.files[0]) : null;
+              validateForm();
+            }}
           />
           <p className="text-sm text-gray-500">
             Cover photo should have dimensions of 1920px by 1080px
@@ -50,6 +56,8 @@ export default function Col1() {
               src={URL.createObjectURL(formState?.logoImage)}
               alt="Uploaded"
               className="object-cover w-full h-full rounded-lg"
+              width={100}
+              height={100}
             />
           ) : (
             <span className="text-gray-400/30">
@@ -58,7 +66,15 @@ export default function Col1() {
             // <span className="text-gray-400">Upload Image</span>
           )}
         </div>
-        <input className="hidden" type="file" name="cover-photo" id="cover-photo" />
+        <input
+          className="hidden"
+          type="file"
+          name="cover-photo"
+          id="cover-photo"
+          onChange={(e) => {
+            e.target.files !== null ? updateFormState("logoImage", e.target.files[0]) : null;
+          }}
+        />
         <p className="text-sm text-gray-500">
           Logo images should have dimensions of 1080px by 1080px
         </p>
