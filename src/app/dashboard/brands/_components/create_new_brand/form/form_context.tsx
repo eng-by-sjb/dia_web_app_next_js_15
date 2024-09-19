@@ -136,7 +136,7 @@ function FormProvider({ children }: { children: ReactNode }) {
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;
 }
 
-export function FormWithContext({ children }: { children: ReactNode }) {
+export function FormWithContext() {
   return (
     <FormProvider>
       <Form></Form>
