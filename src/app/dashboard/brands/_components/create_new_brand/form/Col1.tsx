@@ -44,7 +44,7 @@ export default function Col1() {
           <h3 className="font-medium text-primary">Upload logo image</h3>
           <GoPlus size={22} />
         </div>
-        <div className="w-[6.25rem] h-[6.25rem] bg-zinc-300/30 mb-2 flex items-center justify-center border border-gray-300 rounded-lg">
+        <div className="w-[6.25rem] h-[6.25rem] bg-zinc-300/30 mb-2 flex items-center justify-center rounded-lg">
           {formState?.logoImage ? (
             <Image
               src={URL.createObjectURL(formState?.logoImage)}

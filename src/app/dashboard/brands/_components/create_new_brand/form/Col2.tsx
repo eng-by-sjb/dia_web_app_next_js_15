@@ -19,7 +19,7 @@ export default function Col2() {
   return (
     <div>
       <div>
-        <h3 className="mb-4 font-medium text-primary/80">Basic Information</h3>
+        <h3 className="mb-4 font-medium text-primary">Basic Information</h3>
         <Input
           label="Brand name"
           name="brandName"
@@ -91,7 +91,7 @@ export default function Col2() {
       </div>
 
       <div>
-        <h3 className="mb-4 font-medium text-primary/80">Social media links</h3>
+        <h3 className="mb-4 font-medium text-primary">Social media links</h3>
 
         <div className="mb-6 grid grid-cols-2 gap-2">
           <Input
@@ -147,7 +147,7 @@ export default function Col2() {
 
       <div className="w-full">
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="font-medium text-primary/80">Company details</h3>
+          <h3 className="font-medium text-primary">Company details</h3>
           <button className="h-[0.875rem] font-normal text-sm text-zinc-500 border-none transition  hover:text-zinc-600">
             Add later
           </button>
